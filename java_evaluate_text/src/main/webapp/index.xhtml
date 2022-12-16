@@ -6,9 +6,17 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h1>Hello from Facelets</h1>
         <h:form>
-            <h:outputLabel value="Text: " />
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Nombre: " />
+                <h:inputText id="name" />
+                <h:outputLabel value="Apellido: " />
+                <h:inputText id="lastname" />
+                <h:outputLabel value="Edad: " />
+                <h:inputText id="age" />
+                <h:commandButton value="Guardar" />
+            </h:panelGrid>
         </h:form>
     </h:body>
 </html>
