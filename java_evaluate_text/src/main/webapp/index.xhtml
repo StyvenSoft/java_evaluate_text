@@ -10,13 +10,14 @@
         <h:form>
             <h:panelGrid columns="2">
                 <h:outputLabel value="Nombre: " />
-                <h:inputText id="name" />
+                <h:inputText id="name" value="#{formController.form.name}" />
                 <h:outputLabel value="Apellido: " />
-                <h:inputText id="lastname" />
+                <h:inputText id="lastname" value="#{formController.form.lastname}" />
                 <h:outputLabel value="Edad: " />
-                <h:inputText id="age" />
-                <h:commandButton value="Guardar" />
+                <h:inputText id="age" value="#{formController.form.age}" />
+                <h:commandButton value="Guardar" actionListener="#{formController.update()}" />
             </h:panelGrid>
+            <h:outputLabel value="#{formController.result}" />
         </h:form>
     </h:body>
 </html>

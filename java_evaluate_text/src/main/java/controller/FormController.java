@@ -19,6 +19,14 @@ import javax.inject.Named;
 public class FormController implements Serializable {
     
     MainForm form = new MainForm();
+    String result = "";
+
+    public FormController() {
+    }
+    
+    public void update() {
+        result = "El nombre es: " + form.getName() + " apellido: " + form.getLastname() + " edad: " + form.getAge();
+    }
     
     public MainForm getMainForm() {
         return form;
@@ -30,6 +38,14 @@ public class FormController implements Serializable {
 
     public void setForm(MainForm form) {
         this.form = form;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
     
     
